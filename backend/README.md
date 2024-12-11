@@ -75,4 +75,8 @@ The server will run on `http://localhost:5000`.
 | HTTP Method | Endpoint         | Description                         |
 |-------------|------------------|-------------------------------------|
 | POST        | /users/register | Endpoint for registering a new user. |
+<<<<<<< HEAD
 | POST        | /users/login    | Endpoint for user login.             |
+=======
+| POST        | /users/login    | Endpoint for user login.             |
+>>>>>>> 2d6690394ee74e511ce0845d3054351a59382e7f
