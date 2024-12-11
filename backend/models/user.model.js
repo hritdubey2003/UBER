@@ -25,6 +25,11 @@ const userSchema = new mongoose.Schema({
         required: true,
         select: false,
     },
+    username: {
+        type: String,
+        unique: true,
+        sparse: false
+    },
     socketId: {
         type: String,
     },
@@ -32,8 +37,7 @@ const userSchema = new mongoose.Schema({
 
 
 userSchema.methods.generateAuthToken = async function() {
-    const token = jwt.sign( {_id: this._id } , process.env.JWT_SECRET );
-    return token;
+    return await jwt.sign( {_id: this._id } , process.env.JWT_SECRET );
 }
 
 userSchema.methods.comparePassword = async function( password ) {
