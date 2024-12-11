@@ -52,29 +52,27 @@ The server will run on `http://localhost:5000`.
 
 ## Folder Structure
 
-### ├── controllers 
-### │ └── user.controller.js # Contains controller logic for user-related operations 
-### ├── models 
-### │ └── user.model.js # Mongoose schema and model for users 
-### ├── routes 
-### │ └── user.routes.js # API routes for user endpoints 
-### ├── services 
-### │ └── user.service.js # Service layer for handling user-related business logic 
-### ├── db 
-### │ └── db.js # MongoDB connection logic 
-### ├── app.js # Entry point of the application 
-### └── .env # Environment variables (not included in repo)
+```plaintext
+.
+├── controllers
+│   └── user.controller.js ### Contains controller logic for user-related operations
+├── models
+│   └── user.model.js #### Mongoose schema and model for users
+├── routes
+│   └── user.routes.js ### API routes for user endpoints
+├── services
+│   └── user.service.js ### Service layer for handling user-related business logic
+├── db
+│   └── db.js ### MongoDB connection logic
+├── app.js ### Entry point of the application
+└── .env ### Environment variables (not included in repo)
 
 
 ---
 
 ## API Endpoints
 
-### 1. **Root Endpoint**
-
-- **URL**: `/`
-- **Method**: `GET`
-- **Description**: A basic endpoint to test server connectivity.
-- **Response**:
-  ```json
-  "Hey, Developer I am here"
+| HTTP Method | Endpoint         | Description                         |
+|-------------|------------------|-------------------------------------|
+| POST        | /users/register | Endpoint for registering a new user. |
+| POST        | /users/login    | Endpoint for user login.             |
