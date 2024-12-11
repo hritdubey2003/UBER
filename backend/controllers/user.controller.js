@@ -55,7 +55,14 @@ module.exports.loginUser = async ( req , res , next ) => {
         return res.status(401).json( { error: 'Invalid email or password' } );
     }
 
-    const token = user.generateAuthToken();
+    const token = await user.generateAuthToken();
+    console.log( token );
+
+    res.cookie( 'token' , token , { httpOnly: true } );
 
     res.status( 200 ).json( { token , user } );
+}
+
+module.exports.getUserProfile = async ( req , res , next ) => {
+    res.status( 200 ).json( { user: req.user } );
 }
