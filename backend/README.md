@@ -72,10 +72,11 @@ The server will run on `http://localhost:5000`.
 
 ## API Endpoints
 
-| HTTP Method | Endpoint         | Description                         |
-|-------------|------------------|-------------------------------------|
-| POST        | /users/register | Endpoint for registering a new user. |
-| POST        | /users/login    | Endpoint for user login.             |
-| POST        | /users/profile  | Endpoint for finding a user.         |
-| POST        | /users/logout   | Endpoint for logging out an user.    |
+| HTTP Method | Endpoint                   | Description                          |
+|-------------|----------------------------|--------------------------------------|
+| **POST**    | `/users/register`          | Endpoint for registering a new user. |
+| **POST**    | `/users/login`             | Endpoint for user login.             |
+| **POST**    | `/users/profile`           | Endpoint for finding a user.         |
+| **POST**    | `/users/logout`            | Endpoint for logging out a user.     |
+| **POST**    | `/captains/registerCaptain`| Endpoint for registering a Captain.  |
 
