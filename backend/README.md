@@ -79,4 +79,7 @@ The server will run on `http://localhost:5000`.
 | ***GET**    | `/users/profile`           | Endpoint for finding a user.         |
 | ***GET**    | `/users/logout`            | Endpoint for logging out a user.     |
 | **POST**    | `/captains/register`       | Endpoint for registering a Captain.  |
+| **POST**    | `/captains/login`          | Endpoint for logging in a Captain.   |
+| ***GET**    | `/captains/profile`        | Endpoint for finding Captain's prof. |
+| ***GET**    | `/captains/logout`         | Endpoint for logging out a Captain.  |
 
