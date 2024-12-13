@@ -73,7 +73,6 @@ module.exports.logoutCaptain = async ( req , res , next ) => {
     const token = req.cookies.token || req.headers?.authorization.split(' ')[1];
     
     const isBlacklisted = await BlacklistTokenModel.findOne({ token });
-    console.log( isBlacklisted )
 
     if ( !isBlacklisted ) {
         await BlacklistTokenModel.create({ token });

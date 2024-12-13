@@ -30,7 +30,6 @@ module.exports.registerUser = async ( req , res , next ) => {
 
     await user.save();
 
-    console.log( user );
 
     const token = await user.generateAuthToken();
 
